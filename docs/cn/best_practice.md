@@ -237,7 +237,7 @@ export   NAMESRV_ADDR=192.168.0.1:9876;192.168.0.2:9876
 ```
 客户端默认每隔2分钟访问一次这个HTTP服务器，并更新本地的Name Server地址。URL已经在代码中硬编码，可通过修改/etc/hosts文件来改变要访问的服务器，例如在/etc/hosts增加如下配置：
 ```text
-10.232.22.67    jmenv.taobao.net   
+10.232.22.67    jmenv.tbsite.net   
 ```
 推荐使用HTTP静态服务器寻址方式，好处是客户端部署简单，且Name Server集群可以热升级。
 
@@ -287,7 +287,7 @@ DefaultMQProducer、TransactionMQProducer、DefaultMQPushConsumer、DefaultMQPul
 | subscription                 |                               | 订阅关系                                                     |
 | messageListener              |                               | 消息监听器                                                   |
 | offsetStore                  |                               | 消费进度存储                                                 |
-| consumeThreadMin             | 10                            | 消费线程池最小线程数                                               |
+| consumeThreadMin             | 20                            | 消费线程池最小线程数                                               |
 | consumeThreadMax             | 20                            | 消费线程池最大线程数                                               |
 | consumeConcurrentlyMaxSpan   | 2000                          | 单队列并行消费允许的最大跨度                                 |
 | pullThresholdForQueue        | 1000                          | 拉消息本地队列缓存消息最大数                                 |
